@@ -1,0 +1,85 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "sheetable"
+name = "SheetAble"
+description.en = "Music sheet organizing software"
+description.fr = "Logiciel d'organisation des partitions de musique"
+
+version = "0.8.1~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "AGPL-3.0"
+website = "https://sheetable.net/"
+admindoc = "https://sheetable.net/docs/Installation/native-installation"
+code = "https://github.com/SheetAble/SheetAble"
+
+[integration]
+yunohost = ">= 12.0.9"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/sheetable"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+    [install.admin]
+    type = "user"
+
+    [install.password]
+    type = "password"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    in_subdir = false
+    extract = false
+    rename = "sheetable"
+    amd64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_amd64.tar.gz"
+    amd64.sha256 = "7716b39a5dadee7a963e75943a1376939628c73a99f0bce12d3b35f6c4e66dd5"
+    arm64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_arm64.tar.gz"
+    arm64.sha256 = "6863eb5c5593a7a92f03ea5b3dfe7bb206167038943a5c795d715c2af8a3424f"
+    armhf.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_armv7.tar.gz"
+    armhf.sha256 = "0019fb2e47cd72e9d2dace597d09ab090d9d54f4bec6f60ce0f7e6d77146cf93"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = "^_linux_amd64$"
+    autoupdate.asset.arm64 = "^_linux_arm64$"
+    autoupdate.asset.armhf = "^_linux_armv7$"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+
+    [resources.apt]
+    packages = "postgresql"
+
+    [resources.database]
+    type = "postgresql"

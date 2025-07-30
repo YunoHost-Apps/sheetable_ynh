@@ -1,0 +1,1 @@
+SheetAble est un organisateur de partitions facile à utiliser pour tous les passionnés de musique. Vous pouvez télécharger et organiser vos partitions pour tout type d'instrument que vous utilisez ! Créez des comptes pour vos amis ou votre famille afin de les inviter à utiliser votre bibliothèque ou à télécharger eux-mêmes des partitions.
