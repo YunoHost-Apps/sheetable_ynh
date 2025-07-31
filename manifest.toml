@@ -60,6 +60,8 @@ ram.runtime = "50M"
     armhf.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_armv7.tar.gz"
     armhf.sha256 = "0019fb2e47cd72e9d2dace597d09ab090d9d54f4bec6f60ce0f7e6d77146cf93"
     
+    in_subdir = false
+
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^_linux_amd64$"
     autoupdate.asset.arm64 = "^_linux_arm64$"
