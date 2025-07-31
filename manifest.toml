@@ -62,7 +62,6 @@ ram.runtime = "50M"
 
     extract = false
     rename = "sheetable"
-    in_subdir = true
     
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^_linux_amd64$"
