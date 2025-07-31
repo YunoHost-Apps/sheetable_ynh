@@ -15,8 +15,6 @@ ynh_script_progression "Restoring the app main directory..."
 
 ynh_restore "$install_dir"
 
-chmod +x "$install_dir/sheetable"
-
 #=================================================
 # RESTORE THE DATA DIRECTORY
 #=================================================
@@ -35,8 +33,6 @@ ynh_psql_db_shell < ./db.sql
 # RESTORE SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Restoring system configurations related to $app..."
-
-### This should be a symetric version of what happens in the install script
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
