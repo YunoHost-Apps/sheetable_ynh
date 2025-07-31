@@ -56,11 +56,8 @@ ram.runtime = "50M"
     in_subdir = false
     extract = false
     rename = "sheetable"
-    amd64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8/SheetAble_0.8_linux_amd64.tar.gz"
-    amd64.sha256 = "7bd9e09a718793367e0ac01cbfdfbd3593b7266df7ef73c3e766346c23d9c94d"
-
-    #amd64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_amd64.tar.gz"
-    #amd64.sha256 = "7716b39a5dadee7a963e75943a1376939628c73a99f0bce12d3b35f6c4e66dd5"
+    amd64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_amd64.tar.gz"
+    amd64.sha256 = "7716b39a5dadee7a963e75943a1376939628c73a99f0bce12d3b35f6c4e66dd5"
     arm64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_arm64.tar.gz"
     arm64.sha256 = "6863eb5c5593a7a92f03ea5b3dfe7bb206167038943a5c795d715c2af8a3424f"
     armhf.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_armv7.tar.gz"
