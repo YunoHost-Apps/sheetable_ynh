@@ -53,15 +53,15 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    in_subdir = false
-    extract = false
-    rename = "sheetable"
     amd64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_amd64.tar.gz"
     amd64.sha256 = "7716b39a5dadee7a963e75943a1376939628c73a99f0bce12d3b35f6c4e66dd5"
     arm64.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_arm64.tar.gz"
     arm64.sha256 = "6863eb5c5593a7a92f03ea5b3dfe7bb206167038943a5c795d715c2af8a3424f"
     armhf.url = "https://github.com/SheetAble/SheetAble/releases/download/v0.8.1/SheetAble_0.8.1_linux_armv7.tar.gz"
     armhf.sha256 = "0019fb2e47cd72e9d2dace597d09ab090d9d54f4bec6f60ce0f7e6d77146cf93"
+
+    extract = false
+    rename = "sheetable"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^_linux_amd64$"
@@ -76,6 +76,7 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
+    main.auth_header = false
 
     [resources.ports]
 
