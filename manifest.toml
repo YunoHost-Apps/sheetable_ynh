@@ -5,7 +5,7 @@ packaging_format = 2
 id = "sheetable"
 name = "SheetAble"
 description.en = "Music sheet organizing software"
-description.fr = "Logiciel d'organisation des partitions de musique"
+description.fr = "Logiciel d'organisation de partitions de musique"
 
 version = "0.8.1~ynh1"
 
@@ -23,6 +23,7 @@ helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
+sso = false
 ldap = false
 
 disk = "50M"
