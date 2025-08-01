@@ -20,7 +20,7 @@ Music sheet organizing software
 
 
 ## Screenshots
-![Screenshot of SheetAble](./doc/screenshots/example.jpg)
+![Screenshot of SheetAble](./doc/screenshots/sheetable.png)
 
 ## 📦 Developer info
 
