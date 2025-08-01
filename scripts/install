@@ -15,6 +15,7 @@ password=$YNH_APP_ARG_PASSWORD
 ynh_app_setting_set --key=password --value=$password
 
 email=$(ynh_user_get_info --username=$admin --key=mail)
+key=$(ynh_string_random --length=24)
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -23,8 +24,6 @@ ynh_script_progression "Setting up source files..."
 
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
-
-chmod +x "$install_dir/sheetable"
 
 #=================================================
 # APP INITIAL CONFIGURATION
@@ -55,7 +54,7 @@ ynh_config_add_logrotate
 ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
-#ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
